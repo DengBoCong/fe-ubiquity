@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    健康结论看
+    <el-button type="primary" icon="el-icon-search">搜索</el-button>
   </div>
 </template>
 
@@ -8,11 +10,10 @@
   export default {
     name: 'App',
     components: {
-      HelloWorld
     }
   }
 </script>
 
 <style>
-  @import "./assets/css/base";
+  @import "assets/css/base.css"
 </style>
