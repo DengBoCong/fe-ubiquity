@@ -9,7 +9,7 @@ import {
   restoreTrash,
   getUnreadCount
 } from '@/api/user'
-import { setToken, getToken } from '@/libs/util'
+import { setToken, getToken } from '@/utils/util'
 
 export default {
   state: {
@@ -74,11 +74,11 @@ export default {
   },
   actions: {
     // 登录
-    handleLogin ({ commit }, { userName, password }) {
-      userName = userName.trim()
+    handleLogin ({ commit }, { platform, account, password, isStorage }) {
+      account = account.trim()
       return new Promise((resolve, reject) => {
         login({
-          userName,
+          account:"super_admin",
           password
         }).then(res => {
           const data = res.data

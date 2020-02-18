@@ -24,8 +24,9 @@
       }
     },
     created(){
-      if(this.$store.state.locale !=1)
-        this.$router.push('/login')
+      
+      // if(this.$store.state.locale !=1)
+      //   this.$router.push('/login')
     }
   }
 </script>

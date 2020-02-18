@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import {getHomeMultidata} from "network/home"
+  // import {getHomeMultidata} from "network/home"
 
   export default {
     name: "Home",
@@ -16,9 +16,7 @@
       }
     },
     created() {
-      getHomeMultidata().then(res => {
-        this.result = res;
-      });
+      //
     }
   }
 </script>
