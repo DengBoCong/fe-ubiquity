@@ -8,9 +8,7 @@
     :native="native"
     :tag="tag"
     :noresize="noresize">
-    <ul>
-      <li v-for="item in 100" :key="item">{{item}}</li>
-    </ul>
+    <slot></slot>
   </el-scrollbar>
 </template>
 

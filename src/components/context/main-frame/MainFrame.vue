@@ -19,6 +19,9 @@
       <el-main style="height:100%;width:100%;padding:0;"><!-- overflow-x:hidden;overflow-y:hidden; -->
         <slot name="scrollbar"></slot>
       </el-main>
+      <el-footer style="padding:0">
+        <slot name="footer"></slot>
+      </el-footer>
     </el-container>
   </el-container>
 </template>
