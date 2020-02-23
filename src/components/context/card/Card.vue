@@ -1,5 +1,5 @@
 <template>
-  <el-card shadow="always" class="box-card" :style="{ width: cardSize + 'px'}">
+  <el-card shadow="always" class="box-card" :style="{ width: cardSize + '%'}">
     <div slot="header" class="clearfix">
       <slot name="headerExplain"></slot>
       <slot name="headerOperator"></slot>
@@ -50,6 +50,6 @@ export default {
   }
 
   .box-card {
-    margin: 30px;
+    margin: 2.5%;
   }
 </style>

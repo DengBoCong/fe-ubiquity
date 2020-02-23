@@ -32,8 +32,8 @@ export default {
           viewClass:true
         },
         viewStyle:{
-          border:'1px solid #000000',
-          boxSizing:'border-box'
+          // border:'1px solid #000000',
+          // boxSizing:'border-box'
         },
         // native属性：如果为true就不显示el的bar，也就是el模拟出来的滚动条，如果为false就显示模拟的滚动条
         native:false,
@@ -54,18 +54,11 @@ export default {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  ul li{
-    text-align: center;
-    margin:20px 0;
-  }
   .wrapClass{
-    color:red;
+    /* color:red; */
     
   }
   .viewClass{
-    background:#f5dab1;
-  }
-  .red{
-    color:red;
+    /* background:#f5dab1; */
   }
 </style>

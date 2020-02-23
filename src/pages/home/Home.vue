@@ -12,18 +12,19 @@
     <template v-slot:scrollbar>
       <ScrollBar>
         <el-container>
-          <Card :cardSize="750">
+          <Card :cardSize="45" 
+            v-loading="loading">
             <template v-slot:headerExplain>
               <span>安防</span>
             </template>
             <template v-slot:headerOperator>
-              <el-button style="float: right; padding: 3px 0" type="text">headerOperator</el-button>
+              <el-button @click="openFullScreen" style="float: right; padding: 3px 0" type="text">刷新数据</el-button>
             </template>
             <template v-slot:cardContent>
               <PolicyChart></PolicyChart>
             </template>
           </Card>
-          <Card :cardSize="750">
+          <Card :cardSize="45">
             <template v-slot:header>
               <span>卡片名称</span>
               <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
@@ -34,33 +35,19 @@
     </ul> -->
         </el-container>
         <el-container>
-          <el-col :span="6">
-            <Card :cardSize="350">
-              <template v-slot:header>
-                <span>卡片名称</span>
-                <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-              </template>
-            </Card>
-          </el-col>
-          <el-col :span="12">
-            <Card :cardSize="740">
-              <template v-slot:header>
-                <span>卡片名称</span>
-                <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-              </template>
-            </Card>
-          </el-col>
-          <el-col :span="6">
-            <Card :cardSize="350">
-              <template v-slot:header>
-                <span>卡片名称</span>
-                <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-              </template>
-            </Card>
-          </el-col>
-        </el-container>
-        <el-container>
-          <Card :cardSize="1540">
+          <Card :cardSize="21.25">
+            <template v-slot:header>
+              <span>卡片名称</span>
+              <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+            </template>
+          </Card>
+          <Card :cardSize="42.5">
+            <template v-slot:header>
+              <span>卡片名称</span>
+              <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+            </template>
+          </Card>
+          <Card :cardSize="21.25">
             <template v-slot:header>
               <span>卡片名称</span>
               <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
@@ -68,7 +55,15 @@
           </Card>
         </el-container>
         <el-container>
-          <Card :cardSize="1540">
+          <Card :cardSize="100">
+            <template v-slot:header>
+              <span>卡片名称</span>
+              <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
+            </template>
+          </Card>
+        </el-container>
+        <el-container>
+          <Card :cardSize="100">
             <template v-slot:header>
               <span>卡片名称</span>
               <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
@@ -133,6 +128,7 @@
             },
           ],
         },
+        loading: false,
       }
     },
     computed: {
@@ -143,6 +139,12 @@
     methods: {
       getDrawer(data) {
         this.drawer = data.drawer
+      },
+      openFullScreen() {
+        this.loading = true;
+        setTimeout(() => {
+          this.loading = false;
+        }, 2000);
       },
     },
   }

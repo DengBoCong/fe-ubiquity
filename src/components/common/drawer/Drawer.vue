@@ -1,14 +1,19 @@
 <template>
   <el-drawer
     title=""
-    :visible.sync="drawer"
+    :visible.sync="flag"
     :direction="direction"
     :before-close="handleClose"
     :with-header="false"
     :size="drawerSize">
     <el-carousel :interval="4000" type="card" height="300px">
       <el-carousel-item v-for="item in 6" :key="item">
-        <h3 class="medium">{{ item }}</h3>
+        <el-image
+          style="width: 100%; height: 100%"
+          src="https://img-blog.csdnimg.cn/20200223222435463.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
+          fit="fill">
+        </el-image>
+        <!-- <h3 class="medium">{{ item }}</h3> -->
       </el-carousel-item>
     </el-carousel>
   </el-drawer>
@@ -23,6 +28,8 @@ export default {
   },
   data() {
     return {
+      flag: false,
+      count: 0,
       direction: 'ttb',
       drawerSize: "350px",
     };
@@ -41,22 +48,27 @@ export default {
     },
   },
   computed: {
-    // isDrawer: {
-    //   get: function () {
-    //     if(this.b){
-    //       console.log(this.drawer)
-          
-    //       return this.drawer
-    //     }else {
-    //       this.b = true
-    //       return false
-    //     }
-    //   },
-    //   set: function (newValue) {
-    //     console.log(newValue)
-    //     this.b = false
-    //   }
+    // idDrawer: function() {
+    //   console.log("来了")
+    //   if(this.drawer === flag)
+    //     flag = false
+    //   else flag = true
     // }
+    // isDrawer: {
+      // get: function () {
+      //   return this.drawer
+      // },
+      // set: function (newValue) {
+      //   console.log(newValue)
+      //   return false
+      // }
+    // }
+    // }
+  },
+  watch: {
+    drawer(val) {
+      this.flag = true
+    }
   }
 }
 </script>
