@@ -12,7 +12,13 @@
     <template v-slot:scrollbar>
       <ScrollBar>
         <el-container>
-          <Card :cardSize="45" 
+          <Border10 :marginSize="2.5" :color="['#7DBDFF', '#41EAD5']">
+            <template v-slot:borderContent>
+              <ChinaMapInfoChart></ChinaMapInfoChart>
+            </template>
+          </Border10>
+          <!-- <Border8 :marginSize="2.5" :color="['#7DBDFF', '#41EAD5']"></Border8> -->
+          <!-- <Card :cardSize="45" 
             v-loading="loading">
             <template v-slot:headerExplain>
               <span>安防</span>
@@ -29,7 +35,7 @@
               <span>卡片名称</span>
               <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
             </template>
-          </Card>
+          </Card> -->
           <!-- <ul>
       <li v-for="item in 100" :key="item">{{item}}</li>
     </ul> -->
@@ -88,6 +94,9 @@
   import Card from 'components/context/card/Card'
   import CopyRight from 'components/context/copyright/CopyRight'
   import PolicyChart from 'components/common/chart/PolicyChart'
+  import Border10 from 'components/context/border/Border10'
+  import Border8 from 'components/context/border/Border8'
+  import ChinaMapInfoChart from 'components/common/chart/ChinaMapInfoChart'
 
   import G6 from '@antv/g6'
 
@@ -102,6 +111,9 @@
       Card,
       CopyRight,
       PolicyChart,
+      Border10,
+      Border8,
+      ChinaMapInfoChart,
     },
     data() {
       return {

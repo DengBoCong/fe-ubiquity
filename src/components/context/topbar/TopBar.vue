@@ -4,11 +4,11 @@
     class="el-menu-demo" 
     mode="horizontal" 
     @select="handleSelect">
-    <el-submenu index="5" style="float:right;">
+    <el-submenu index="1" style="float:right;">
       <template slot="title"><el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar></template>
-      <el-menu-item>个人信息</el-menu-item>
-      <el-menu-item>日志信息</el-menu-item>
-      <el-menu-item>退出登录</el-menu-item>
+      <el-menu-item index="userInfo">个人信息</el-menu-item>
+      <el-menu-item index="logInfo">日志信息</el-menu-item>
+      <el-menu-item index="logout">退出登录</el-menu-item>
     </el-submenu>
     <el-menu-item index="4" style="float:right;"><a href="#" target="_blank">订单管理</a></el-menu-item>
     <el-menu-item index="3" style="float:right;" disabled>消息中心</el-menu-item>
@@ -24,11 +24,12 @@
         <el-menu-item index="2-4-3">选项3</el-menu-item>
       </el-submenu>
     </el-submenu>
-    <el-menu-item index="1" style="float:right;">处理中心</el-menu-item>
+    <el-menu-item index="6" style="float:right;">处理中心</el-menu-item>
   </el-menu>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: "TopBar",
   components: {
@@ -40,8 +41,25 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'handleLogOut'
+    ]),
+    logout () {
+      this.handleLogOut().then(() => {
+        this.$router.push({
+          name: 'login'
+        })
+      })
+    },
     handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+      switch(key){
+        case 'userInfo': console.log(key)
+          break
+        case 'logInfo': console.log(key)
+          break
+        case 'logout': this.logout()
+          break
+      }
     },
   }
 }

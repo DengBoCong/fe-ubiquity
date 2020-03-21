@@ -9,6 +9,7 @@ import config from '@/config'
 import importDirective from '@/directive'
 import { directive as clickOutside } from 'element-ui/src/utils/clickoutside'
 import installPlugin from '@/plugin'
+import dataV from '@jiaminghi/data-view'
 import './index.less'
 // 实际打包时应该不引入mock
 /* eslint-disable */
@@ -18,6 +19,7 @@ if (process.env.NODE_ENV !== 'production') require('@/mock')
 Vue.use(ElementUI, {
   i18n: (key, value) => i18n.t(key, value)
 })
+Vue.use(dataV)
 Vue.config.productionTip = false;
 
 /**
