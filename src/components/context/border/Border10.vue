@@ -1,5 +1,5 @@
 <template>
-  <dv-border-box-10 :style="{ margin: marginSize + '%'}" :color="color">
+  <dv-border-box-10 :style="{ margin: marginSize + '%', width: widthSize + '%', height: heightSize}" :color="color">
     <slot name="borderContent"></slot>
   </dv-border-box-10>
 </template>
@@ -20,9 +20,18 @@ export default {
   },
   props: {
     // cardSize: Number, 
-    marginSize: Number,
-    mainColor: String,
-    voteColor: String,
+    marginSize: {
+      type: Number,
+      default: ()=> 0
+    },
+    widthSize: {
+      type: Number,
+      default: ()=> 100
+    },
+    heightSize: {
+      type: String,
+      default: ()=> "auto"
+    },
     color: {
       type: Array,
       default: ()=>['red', 'green']

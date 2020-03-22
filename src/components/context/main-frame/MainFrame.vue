@@ -4,12 +4,13 @@
     <el-aside style="width:16%">
       <el-container>
         <el-header style="padding:5px;">
-          <el-button @click="handleClick" type="primary" style="width:100%;height:100%;" plain>
-            切换模块
-          </el-button>
+          <dv-decoration-11 style="width:100%;height:100%;">Ubiquity - 无处不在.<span style="font-size:10px;">版本号：1.3.6</span></dv-decoration-11>
         <!-- <el-avatar shape="square" :size="100" fit="fill" src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"></el-avatar> -->
         </el-header>
         <el-main style="padding:0;">
+          <el-button @click="handleClick" type="primary" style="width:100%;height:100%;" plain>
+            切换模块
+          </el-button>
           <slot name="sidebar"></slot>
         </el-main>
       </el-container>

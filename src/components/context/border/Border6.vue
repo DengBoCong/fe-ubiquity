@@ -1,12 +1,12 @@
 <template>
-  <dv-border-box-12 :style="{ margin: marginSize + '%', width: widthSize + '%', height: heightSize}" :color="color">
+  <dv-border-box-6 :style="{ margin: marginSize + '%', width: widthSize + '%', height: heightSize}" :color="color">
     <slot name="borderContent"></slot>
-  </dv-border-box-12>
+  </dv-border-box-6>
 </template>
 
 <script>
 export default {
-  name: "Border12",
+  name: "Border6",
   components: {
     //
   },

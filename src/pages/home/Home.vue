@@ -4,77 +4,42 @@
       <Drawer :drawer="drawer"></Drawer>
     </template>
     <template v-slot:sidebar>
-      <SideBar></SideBar>
+      <HomeSideBar></HomeSideBar>
     </template>
     <template v-slot:topbar>
       <TopBar></TopBar>
     </template>
     <template v-slot:scrollbar>
       <ScrollBar>
+        <dv-decoration-10 style="width:100%;height:5px;" />
         <el-container>
-          <Border10 :marginSize="2.5" :color="['#7DBDFF', '#41EAD5']">
+          <el-aside width="60%">
+            <Border10 :marginSize="2.5" :widthSize="95" :color="['#7DBDFF', '#41EAD5']">
+              <template v-slot:borderContent>
+                <ChinaMapInfoChart></ChinaMapInfoChart>
+              </template>
+            </Border10>
+          </el-aside>
+          <el-main style="padding:0;">
+            <el-container>
+              <Border10 :marginSize="3.5" :widthSize="94" :heightSize="TRHeight" :color="['#7DBDFF', '#41EAD5']"></Border10>
+            </el-container>
+            <el-container>
+              <Border10 :marginSize="3.5" :widthSize="94" :heightSize="TRHeight" :color="['#7DBDFF', '#41EAD5']"></Border10>
+            </el-container>
+          </el-main>
+        </el-container>
+        <el-container>
+          <Border10 :marginSize="1.5" :widthSize="23.75" :color="['#7DBDFF', '#41EAD5']"></Border10>
+          <Border10 :marginSize="1.5" :widthSize="42.5" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
-              <ChinaMapInfoChart></ChinaMapInfoChart>
-            </template>
-          </Border10>
-          <!-- <Border8 :marginSize="2.5" :color="['#7DBDFF', '#41EAD5']"></Border8> -->
-          <!-- <Card :cardSize="45" 
-            v-loading="loading">
-            <template v-slot:headerExplain>
-              <span>安防</span>
-            </template>
-            <template v-slot:headerOperator>
-              <el-button @click="openFullScreen" style="float: right; padding: 3px 0" type="text">刷新数据</el-button>
-            </template>
-            <template v-slot:cardContent>
               <PolicyChart></PolicyChart>
             </template>
-          </Card>
-          <Card :cardSize="45">
-            <template v-slot:header>
-              <span>卡片名称</span>
-              <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-            </template>
-          </Card> -->
-          <!-- <ul>
-      <li v-for="item in 100" :key="item">{{item}}</li>
-    </ul> -->
+          </Border10>
+          <Border10 :marginSize="1.5" :widthSize="23.75" :color="['#7DBDFF', '#41EAD5']"></Border10>
         </el-container>
         <el-container>
-          <Card :cardSize="21.25">
-            <template v-slot:header>
-              <span>卡片名称</span>
-              <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-            </template>
-          </Card>
-          <Card :cardSize="42.5">
-            <template v-slot:header>
-              <span>卡片名称</span>
-              <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-            </template>
-          </Card>
-          <Card :cardSize="21.25">
-            <template v-slot:header>
-              <span>卡片名称</span>
-              <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-            </template>
-          </Card>
-        </el-container>
-        <el-container>
-          <Card :cardSize="100">
-            <template v-slot:header>
-              <span>卡片名称</span>
-              <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-            </template>
-          </Card>
-        </el-container>
-        <el-container>
-          <Card :cardSize="100">
-            <template v-slot:header>
-              <span>卡片名称</span>
-              <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-            </template>
-          </Card>
+          <Border10 :marginSize="2.5" :heightSize="TRHeight"  :widthSize="94" :color="['#7DBDFF', '#41EAD5']"></Border10>
         </el-container>
       </ScrollBar>
     </template>
@@ -88,7 +53,7 @@
   // import {getHomeMultidata} from "network/home"
   import MainFrame from 'components/context/main-frame/MainFrame'
   import Drawer from 'components/common/drawer/Drawer'
-  import SideBar from 'components/context/sidebar/SideBar'
+  import HomeSideBar from './HomeSideBar'
   import TopBar from 'components/context/topbar/TopBar'
   import ScrollBar from 'components/context/scrollbar/ScrollBar'
   import Card from 'components/context/card/Card'
@@ -96,6 +61,8 @@
   import PolicyChart from 'components/common/chart/PolicyChart'
   import Border10 from 'components/context/border/Border10'
   import Border8 from 'components/context/border/Border8'
+  import Border12 from 'components/context/border/Border12'
+  import Border1 from 'components/context/border/Border1'
   import ChinaMapInfoChart from 'components/common/chart/ChinaMapInfoChart'
 
   import G6 from '@antv/g6'
@@ -105,7 +72,7 @@
     components: {
       MainFrame,
       Drawer,
-      SideBar,
+      HomeSideBar,
       TopBar,
       ScrollBar,
       Card,
@@ -113,10 +80,13 @@
       PolicyChart,
       Border10,
       Border8,
+      Border12,
+      Border1,
       ChinaMapInfoChart,
     },
     data() {
       return {
+        TRHeight: "180px",
         drawer: false,
         chartData: {
           // 点集
