@@ -35,6 +35,15 @@ export default [
       }
     ]
   },
+  {
+    path: '/dataTrend',
+    name: 'dataTrend',
+    meta: {
+      title: 'Ubiquity - 数据趋势分析',
+      hideInMenu: true
+    },
+    component: () => import('pages/data-trend/DataTrend')
+  },
   // {
   //   path: '',
   //   name: 'doc',

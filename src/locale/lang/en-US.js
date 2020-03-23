@@ -1,6 +1,7 @@
 export default {
   home: 'Home',
   login: 'Login',
+  dataTrend: 'DataTrend',
   components: 'Components',
   count_to_page: 'Count-to',
   tables_page: 'Table',

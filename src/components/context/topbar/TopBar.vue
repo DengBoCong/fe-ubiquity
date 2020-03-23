@@ -14,7 +14,7 @@
     <el-menu-item index="3" style="float:right;" disabled>消息中心</el-menu-item>
     <el-submenu index="2" style="float:right;">
       <template slot="title">我的工作台</template>
-      <el-menu-item index="2-1">选项1</el-menu-item>
+      <el-menu-item index="2-1">语音模式</el-menu-item>
       <el-menu-item index="2-2">选项2</el-menu-item>
       <el-menu-item index="2-3">选项3</el-menu-item>
       <el-submenu index="2-4">
@@ -24,7 +24,7 @@
         <el-menu-item index="2-4-3">选项3</el-menu-item>
       </el-submenu>
     </el-submenu>
-    <el-menu-item index="6" style="float:right;">处理中心</el-menu-item>
+    <el-menu-item index="home" style="float:right;">数据中心</el-menu-item>
   </el-menu>
 </template>
 
@@ -58,6 +58,10 @@ export default {
         case 'logInfo': console.log(key)
           break
         case 'logout': this.logout()
+          break
+        case 'home': this.$router.push({
+                      name: this.$config.homeName
+                    })
           break
       }
     },
