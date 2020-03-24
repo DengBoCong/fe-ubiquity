@@ -1,9 +1,9 @@
 <template>
   <v-chart 
-  :options="oneweekinfodatatrend" 
+  :options="linebaruserdatatrend" 
   :init-options="initOptions" 
-  ref="oneweekinfodatatrend" 
-  autoresize style="width:100%;margin-top:30px;"/>
+  ref="linebaruserdatatrend" 
+  autoresize style="width:100%;margin:50px"/>
 </template>
 
 <script>
@@ -12,13 +12,13 @@ import $ from 'jquery'
 import { getTableData } from '@/api/data'
 import ECharts from 'vue-echarts/components/ECharts'
 import qs from 'qs'
-import oneweekinfodatatrend from '../../../mock/data/oneweekinfodatatrend'
+import linebaruserdatatrend from '../../../mock/data/linebaruserdatatrend'
 
 
 
 
 export default {
-  name: "OneWeekInfoChart",
+  name: "LineBarUserDataTrend",
   components: {
     'v-chart': ECharts
   },
@@ -26,7 +26,7 @@ export default {
     const options = qs.parse(location.search, { ignoreQueryPrefix: true })
     return {
         options,
-        oneweekinfodatatrend,
+        linebaruserdatatrend,
         initOptions: {
           renderer: options.renderer || 'canvas'
         },

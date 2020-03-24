@@ -106,13 +106,13 @@
    title: {
      text: '一周跑步数据',
      textStyle: {
-       color: '#fff',
+       color: '#000000',
        fontSize: 32,
        fontWeight: 'normal'
      },
      subtext: year + '/' + weekCategory[6],
      subtextStyle: {
-       color: '#fff',
+       color: '#000000',
        fontSize: 16,
      },
      top: 50,
@@ -127,7 +127,7 @@
      itemHeight: 12,
      data: ['平均指标', '我的指标'],
      textStyle: {
-       color: '#fff',
+       color: '#000000',
        fontSize: 14,
      },
    },
@@ -138,7 +138,7 @@
      center: ['68%', '27%'],
      radius: '40%',
      name: {
-       color: '#fff'
+       color: '#000000'
      },
      splitNumber: 8,
      axisLine: {
@@ -155,7 +155,7 @@
      },
      splitArea: {
        areaStyle: {
-         color: '#fff',
+         color: '#000000',
          opacity: .1,
          shadowBlur: 25,
          shadowColor: '#000',
@@ -212,7 +212,7 @@
      splitLine: {
        show: true,
        lineStyle: {
-         color: '#fff',
+         color: '#000000',
          opacity: .1
        }
      },
@@ -281,7 +281,7 @@
      symbolSize: 8,
      itemStyle: {
        normal: {
-         color: '#fff'
+         color: '#000000'
        }
      },
      lineStyle: {
@@ -351,8 +351,71 @@
      data: weekMaxData,
      animation: false
    }],
-   backgroundColor: '#383546',
+   backgroundColor: 'transparent',
  };
+
+ // 点击事件
+//  myChart.on('click', function(params) {
+//   if (params.componentType === 'series' && params.seriesType === 'line') {
+
+//     var dataIndex = params.dataIndex;
+//     myChart.setOption({
+//       series: [
+//       {
+//     name: '每日跑步指标分布与比较',
+//     type: 'radar',
+//     symbolSize: 0,
+//     data: [{
+//       name: '平均指标',
+//       value: radarDataAvg[dataIndex],
+//       itemStyle: {
+//         normal: {
+//           color: '#f8d351',
+//         }
+//       },
+//       lineStyle: {
+//         normal: {
+//           opacity: 0,
+//         }
+//       },
+//       areaStyle: {
+//         normal: {
+//           color: '#f8d351',
+//           shadowBlur: 25,
+//           shadowColor: 'rgba(248,211,81,.3)',
+//           shadowOffsetX: 0,
+//           shadowOffsetY: -10,
+//           opacity: 1
+//         }
+//       },
+//     }, {
+//       name: '我的指标',
+//       value: radarData[dataIndex],
+//       itemStyle: {
+//         normal: {
+//           color: '#43dfa2',
+//         }
+//       },
+//       lineStyle: {
+//         normal: {
+//           opacity: 0,
+//         }
+//       },
+//       areaStyle: {
+//         normal: {
+//           color: color.linearGtoB,
+//           shadowBlur: 15,
+//           shadowColor: 'rgba(0,0,0,.2)',
+//           shadowOffsetX: 0,
+//           shadowOffsetY: 5,
+//           opacity: .8
+//         }
+//       },
+//     }]
+//   }]
+//     })
+//   }
+// });
 
 export default option
 

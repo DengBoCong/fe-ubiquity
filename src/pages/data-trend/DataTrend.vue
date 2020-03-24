@@ -13,30 +13,30 @@
       <ScrollBar>
         <dv-decoration-10 style="width:100%;height:5px;" />
         <el-container>
-          <Border12 :marginSize="2.5" :widthSize="95" :color="['#7DBDFF', '#41EAD5']">
+          <Border10 :marginSize="2.5" :widthSize="95" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
               <LineBarDataTrendChart></LineBarDataTrendChart>
             </template>
-          </Border12>
+          </Border10>
         </el-container>
         <el-container>
-          <Border12 :marginSize="1.5" :widthSize="44" :color="['#7DBDFF', '#41EAD5']">
+          <Border10 :marginSize="2.5" :widthSize="45" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
               <ErrorBarInfoChart></ErrorBarInfoChart>
             </template>
-          </Border12>
-          <Border12 :marginSize="1.5" :widthSize="44" :color="['#7DBDFF', '#41EAD5']">
+          </Border10>
+          <Border10 :marginSize="2.5" :widthSize="45" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
               <OneWeekInfoChart></OneWeekInfoChart>
             </template>
-          </Border12>
+          </Border10>
         </el-container>
         <el-container>
-          <Border12 :marginSize="2.5" :heightSize="BHeight"  :widthSize="94" :color="['#7DBDFF', '#41EAD5']">
+          <Border10 :marginSize="2.5" :heightSize="BHeight"  :widthSize="94" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
-              <LineHomeChart></LineHomeChart>
+              <LineBarUserDataTrend></LineBarUserDataTrend>
             </template>
-          </Border12>
+          </Border10>
         </el-container>
       </ScrollBar>
     </template>
@@ -62,7 +62,7 @@
   import Border1 from 'components/context/border/Border1'
   import LineBarDataTrendChart from 'components/common/chart/LineBarDataTrendChart'
   import OneWeekInfoChart from 'components/common/chart/OneWeekInfoChart'
-  import LineHomeChart from 'components/common/chart/LineHomeChart'
+  import LineBarUserDataTrend from 'components/common/chart/LineBarUserDataTrend'
 
   import G6 from '@antv/g6'
 
@@ -82,8 +82,8 @@
       Border12,
       Border1,
       LineBarDataTrendChart,
-      LineHomeChart,
       OneWeekInfoChart,
+      LineBarUserDataTrend,
     },
     data() {
       return {

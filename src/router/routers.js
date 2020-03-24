@@ -44,6 +44,33 @@ export default [
     },
     component: () => import('pages/data-trend/DataTrend')
   },
+  {
+    path: '/crowdDensity',
+    name: 'crowdDensity',
+    meta: {
+      title: 'Ubiquity - 人群密度分析',
+      hideInMenu: true
+    },
+    component: () => import('pages/crowd-density/CrowdDensity')
+  },
+  {
+    path: '/illness',
+    name: 'illness',
+    meta: {
+      title: 'Ubiquity - 用户疾病分析',
+      hideInMenu: true
+    },
+    component: () => import('pages/illness/Illness')
+  },
+  {
+    path: '/journey',
+    name: 'journey',
+    meta: {
+      title: 'Ubiquity - 出行驻留分析',
+      hideInMenu: true
+    },
+    component: () => import('pages/journey/Journey')
+  },
   // {
   //   path: '',
   //   name: 'doc',

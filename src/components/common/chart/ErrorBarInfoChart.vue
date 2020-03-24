@@ -1,5 +1,8 @@
 <template>
-  <v-chart :options="errorbarinfo" :init-options="initOptions" ref="errorbarinfo" autoresize style="width:100%"/>
+  <v-chart :options="errorbarinfo" 
+  :init-options="initOptions" 
+  ref="errorbarinfo" 
+  autoresize style="width:100%;margin:20px"/>
 </template>
 
 <script>

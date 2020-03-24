@@ -1,9 +1,9 @@
 <template>
   <v-chart 
-  :options="oneweekinfodatatrend" 
+  :options="illness" 
   :init-options="initOptions" 
-  ref="oneweekinfodatatrend" 
-  autoresize style="width:100%;margin-top:30px;"/>
+  ref="illness" 
+  autoresize style="width:100%;margin-top:50px"/>
 </template>
 
 <script>
@@ -12,13 +12,10 @@ import $ from 'jquery'
 import { getTableData } from '@/api/data'
 import ECharts from 'vue-echarts/components/ECharts'
 import qs from 'qs'
-import oneweekinfodatatrend from '../../../mock/data/oneweekinfodatatrend'
-
-
-
+import illness from './jstopleftchart.js'
 
 export default {
-  name: "OneWeekInfoChart",
+  name: "TopLeftChart",
   components: {
     'v-chart': ECharts
   },
@@ -26,7 +23,7 @@ export default {
     const options = qs.parse(location.search, { ignoreQueryPrefix: true })
     return {
         options,
-        oneweekinfodatatrend,
+        illness,
         initOptions: {
           renderer: options.renderer || 'canvas'
         },

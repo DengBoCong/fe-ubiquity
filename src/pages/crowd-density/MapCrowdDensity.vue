@@ -1,9 +1,9 @@
 <template>
   <v-chart 
-  :options="oneweekinfodatatrend" 
+  :options="mapcrowddensity" 
   :init-options="initOptions" 
-  ref="oneweekinfodatatrend" 
-  autoresize style="width:100%;margin-top:30px;"/>
+  ref="mapcrowddensity" 
+  autoresize style="width:100%;margin:0px"/>
 </template>
 
 <script>
@@ -12,13 +12,12 @@ import $ from 'jquery'
 import { getTableData } from '@/api/data'
 import ECharts from 'vue-echarts/components/ECharts'
 import qs from 'qs'
-import oneweekinfodatatrend from '../../../mock/data/oneweekinfodatatrend'
+import mapcrowddensity from './jsmapcrowddensity.js'
 
-
-
+// ECharts.hideLoading();
 
 export default {
-  name: "OneWeekInfoChart",
+  name: "MapCrowdDensity",
   components: {
     'v-chart': ECharts
   },
@@ -26,7 +25,7 @@ export default {
     const options = qs.parse(location.search, { ignoreQueryPrefix: true })
     return {
         options,
-        oneweekinfodatatrend,
+        mapcrowddensity,
         initOptions: {
           renderer: options.renderer || 'canvas'
         },
