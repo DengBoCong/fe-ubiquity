@@ -5,6 +5,8 @@ export default {
   crowdDensity: 'CrowdDensity',
   illness: 'Illness',
   journey: 'Journey',
+  tripMode: 'TripMode',
+  personalAnalysis: 'PersonalAnalysis',
   components: 'Components',
   count_to_page: 'Count-to',
   tables_page: 'Table',

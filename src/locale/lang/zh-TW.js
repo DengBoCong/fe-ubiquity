@@ -5,6 +5,8 @@ export default {
   crowdDensity: '人群密度分析',
   illness: '用戶疾病分析',
   journey: '出行駐留分析',
+  tripMode: '出行方式分析',
+  personalAnalysis: '個人用戶分析',
   components: '组件',
   count_to_page: '数字渐变',
   tables_page: '多功能表格',

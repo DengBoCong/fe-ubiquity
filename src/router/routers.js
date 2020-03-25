@@ -71,6 +71,24 @@ export default [
     },
     component: () => import('pages/journey/Journey')
   },
+  {
+    path: '/tripMode',
+    name: 'tripMode',
+    meta: {
+      title: 'Ubiquity - 出行驻留分析',
+      hideInMenu: true
+    },
+    component: () => import('pages/trip-mode/TripMode')
+  },
+  {
+    path: '/personalAnalysis',
+    name: 'personalAnalysis',
+    meta: {
+      title: 'Ubiquity - 出行驻留分析',
+      hideInMenu: true
+    },
+    component: () => import('pages/personal-analysis/PersonalAnalysis')
+  },
   // {
   //   path: '',
   //   name: 'doc',

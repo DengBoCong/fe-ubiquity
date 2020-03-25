@@ -1,9 +1,9 @@
 <template>
   <v-chart 
-  :options="journey" 
+  :options="tripmode" 
   :init-options="initOptions" 
-  ref="journey" 
-  autoresize style="width:100%;margin-top:15%"/>
+  ref="tripmode" 
+  autoresize style="width:98%;margin-top:0%"/>
 </template>
 
 <script>
@@ -12,10 +12,10 @@ import $ from 'jquery'
 import { getTableData } from '@/api/data'
 import ECharts from 'vue-echarts/components/ECharts'
 import qs from 'qs'
-import journey from './jsmiddleleftchart.js'
+import tripmode from './jstoprightchart.js'
 
 export default {
-  name: "MiddleLeftChart",
+  name: "TopRightChart",
   components: {
     'v-chart': ECharts
   },
@@ -23,7 +23,7 @@ export default {
     const options = qs.parse(location.search, { ignoreQueryPrefix: true })
     return {
         options,
-        journey,
+        tripmode,
         initOptions: {
           renderer: options.renderer || 'canvas'
         },

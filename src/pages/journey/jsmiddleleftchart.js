@@ -1,132 +1,126 @@
-var val1data2 = [{
-  value: 0.2,
-  name: '装配完成率',
-},
-{
-  value: 0.3,
-  name: '班检完成率',
-},
-{
-  value: 0.4,
-  name: '初检完成率',
-},
-{
-  value: 0.3,
-  name: '复检完成率',
-},
-{
-  value: 0.1,
-  name: '出厂检完成率',
-},
-]
+var placeHolderStyle = {
+    normal: {
+        color: '#ccc'
+    },
+    emphasis: {
+        color: '#ccc'
+    }
+}
 
-var arr = ['middleLost', 0.6, val1data2, '今日完成进度']
 
 const option = {
-title: {
-  top: '45%',
-  left: 'center',
-  text: arr[3],
-  textStyle: {
-      color: '#fff',
-      fontStyle: 'normal',
-      fontWeight: 'normal',
-      fontSize: 14
-  },
-  subtext: '(占所有数据的的' + (arr[1] * 10000 / 100).toFixed(2) + '%)',
-  subtextStyle: {
-      color: '#fff',
-      fontSize: 12
-  }
-},
-tooltip: {
-  trigger: 'item',
-  formatter: function(res) {
-      console.log(res)
+    title: [{
+        text: '累计认证个人用户',
+        subtext: '纯属虚构',
+        left: 'center'
+    }, {
+        text: '2345',
+        subtext: '总计人数',
+        left: 'center',
+        top: 'middle',
+        textStyle: {
+            fontSize: 20,
+        },
+        subtextStyle: {
+            fontSize: 16
+        }
+    }],
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        left: '20',
+        data: ['客户经理', '发货人', '收货人', '司机']
+    },
+    series: [{
+        name: '客户经理',
+        type: 'pie',
+        radius: ['25%', '25.4%'],
+        label: false,
+        clockWise: true, //顺时加载
+        hoverAnimation: true,
+        hoverOffset: 3,
+        data: [{
+                value: '1078',
+                name: '客户经理',
+                itemStyle: {
+                    normal: {
+                        shadowBlur: 8,
+                        shadowColor: 'rgba(255, 0, 0, 0.5)'
+                    }
+                }
+            },
+            {
+                value: '400',
+                hoverAnimation: false, //鼠标移入变大
+                itemStyle: placeHolderStyle
+            }
 
-      if (res.componentSubType == 'liquidFill') {
-          return res.seriesName + ': ' + (res.value * 10000 / 100).toFixed(2) + '%';
-      } else {
-          return '<span class="ii" style="background:' + res.color + ' "></span>' + res.name + ':<br/> ' + res.data.value;
-      }
-  }
-},
-series: [{
-      type: 'liquidFill',
-      itemStyle: {
-          normal: {
-              opacity: 0.4,
-              shadowBlur: 0,
-              shadowColor: 'blue'
-          }
-      },
-      name: arr[3],
-      data: [{
-          value: 0.6,
-          itemStyle: {
-              normal: {
-                  color: '#53d5ff',
-                  opacity: 0.6
-              }
-          }
-      }],
-    //  background: '#fff',
-      color: ['#53d5ff'],
-      center: ['50%', '50%'],
-    /*  backgroundStyle: {
-          color: '#fff'
-      },*/
-      label: {
-          normal: {
-              formatter: '',
-              textStyle: {
-                  fontSize: 12
-              }
-          }
-      },
-      outline: {
-          itemStyle: {
-              borderColor: '#86c5ff',
-              borderWidth: 0
-          },
-          borderDistance: 0
-      }
-  },
-  {
-      type: 'pie',
-      radius: ['42%', '50%'],
-           color: ['#c487ee', '#deb140','#49dff0', '#034079', '#6f81da', '#00ffb4'],
-      hoverAnimation: false, ////设置饼图默认的展开样式
-      label: {
-          show: true,
-          
-          normal: {
-                formatter: '{b}\n{d}%',
-              show: true,
-              position: ''
-          },
-      },
-      labelLine: {
-          normal: {
-              show: false
-          }
-      },
-
-      itemStyle: { // 此配置
-          normal: {
-              borderWidth: 2,
-              borderColor: '#fff',
-          },
-          emphasis: {
-              borderWidth: 0,
-              shadowBlur: 2,
-              shadowOffsetX: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)'
-          }
-      },
-      data: arr[2]
-  }
-]
-}
+        ]
+    }, {
+        name: '发货人',
+        type: 'pie',
+        radius: ['35%', '36%'],
+        label: false,
+        clockWise: true,
+        hoverAnimation: true,
+        hoverOffset: 3,
+        data: [{
+                value: '981',
+                name: '发货人',
+                itemStyle: {
+                    normal: {
+                        color: '#5886f0',
+                        borderWidth: 8,
+                        borderColor: '#5886f0'
+                    }
+                }
+            },
+            {
+                value: '900',
+                hoverAnimation: false,
+                itemStyle: placeHolderStyle
+            }
+        ]
+    }, {
+        name: '收货人',
+        type: 'pie',
+        radius: ['45%', '46%'],
+        label: false,
+        clockWise: true,
+        hoverAnimation: true,
+        hoverOffset: 3,
+        data: [{
+                value: '877',
+                name: '收货人',
+            },
+            {
+                value: '500',
+                hoverAnimation: false,
+                itemStyle: placeHolderStyle
+            }
+        ]
+    }, {
+        name: '司机',
+        type: 'pie',
+        radius: ['55%', '56%'],
+        label: false,
+        clockWise: true,
+        hoverAnimation: true,
+        hoverOffset: 3,
+        data: [{
+                value: '939',
+                name: '司机',
+            },
+            {
+                value: '200',
+                hoverAnimation: false,
+                itemStyle: placeHolderStyle
+            }
+        ]
+    }, ]
+};
 
 export default option
