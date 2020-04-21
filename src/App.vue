@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view v-if="isRouterAlive"></router-view>
   </div>
 </template>
 
@@ -9,18 +9,29 @@
 
   export default {
     name: 'App',
+    provide () {    //父组件中通过provide来提供变量，在子组件中通过inject来注入变量。                                             
+        return {
+            reload: this.reload                                              
+        }
+    },
     components: {
       Login,
     },
     data() {
       return {
-
+        isRouterAlive: true,
       }
     },
     methods: {
       re() {
         console.log("好了");
         this.$router.push('/login')
+      },
+      reload () {
+          this.isRouterAlive = false;            //先关闭，
+          this.$nextTick(function () {
+              this.isRouterAlive = true;         //再打开
+          }) 
       }
     },
     created(){

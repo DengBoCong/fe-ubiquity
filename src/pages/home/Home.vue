@@ -143,44 +143,39 @@
         configTR1: {
           data: [
             {
-              name: '周口',
-              value: 55
-            },
-            {
-              name: '南阳',
+              name: '公交',
               value: 120
             },
             {
-              name: '西峡',
+              name: '飞机',
               value: 71
             },
             {
-              name: '驻马店',
+              name: '轮渡',
               value: 66
             },
             {
-              name: '新乡',
+              name: '驾车',
               value: 80
             },
             {
-              name: '信阳',
+              name: '地铁',
               value: 35
             },
             {
-              name: '漯河',
+              name: '步行',
               value: 15
             }
           ],
           img: [
-            'http://datav.jiaminghi.com/img/conicalColumnChart/1st.png',
+            'http://datav.jiaminghi.com/img/conicalColumnChart/6st.png',
             'http://datav.jiaminghi.com/img/conicalColumnChart/2st.png',
-            'http://datav.jiaminghi.com/img/conicalColumnChart/3st.png',
             'http://datav.jiaminghi.com/img/conicalColumnChart/4st.png',
             'http://datav.jiaminghi.com/img/conicalColumnChart/5st.png',
-            'http://datav.jiaminghi.com/img/conicalColumnChart/6st.png',
+            'http://datav.jiaminghi.com/img/conicalColumnChart/3st.png',
             'http://datav.jiaminghi.com/img/conicalColumnChart/7st.png'
           ],
-          showValue: true,
+          // showValue: true,
           textColor: '#606266',
         },
         configTR2: {
@@ -190,84 +185,84 @@
         configML: {
           data: [
             {
-              name: '周口',
+              name: '中山公园东站(公交站)',
+              value: 685
+            },
+            {
+              name: '和平大街八纬路站(公交站)',
+              value: 123
+            },
+            {
+              name: '中华路太原街站(公交站)',
+              value: 102
+            },
+            {
+              name: '北三路圣工街(公交站)',
+              value: 95
+            },
+            {
+              name: '马路湾北站(公交站)',
+              value: 93
+            },
+            {
+              name: '家具广场站(公交站)',
+              value: 67
+            },
+            {
+              name: '保工街南十四路站(公交站)',
+              value: 65
+            },
+            {
+              name: '北行站(公交站)',
+              value: 65
+            },
+            {
+              name: '中山广场东站(公交站)',
+              value: 62
+            },
+            {
+              name: '北市场西站(公交站)',
+              value: 61
+            },
+            {
+              name: '龙之梦旅游度假中心(公交站)',
               value: 55
             },
             {
-              name: '南阳',
-              value: 120
+              name: '霁虹站(公交站)',
+              value: 54
             },
             {
-              name: '西峡',
-              value: 78
-            },
-            {
-              name: '驻马店',
-              value: 66
-            },
-            {
-              name: '新乡',
-              value: 80
-            },
-            {
-              name: '信阳',
-              value: 45
-            },
-            {
-              name: '漯河',
-              value: 29
-            },
-            {
-              name: '周口',
-              value: 55
-            },
-            {
-              name: '南阳',
-              value: 120
-            },
-            {
-              name: '西峡',
-              value: 78
-            },
-            {
-              name: '驻马店',
-              value: 66
-            },
-            {
-              name: '新乡',
-              value: 80
-            },
-            {
-              name: '信阳',
-              value: 45
-            },
-            {
-              name: '漯河',
-              value: 29
+              name: '北市场西站(公交站)',
+              value: 48
             }
           ],
           rowNum: 10,
         },
         configMR: {
-          header: ['列1', '列2', '列3'],
+          header: ['经度', '纬度'],
           data: [
-            ['<span style="color:#37a2da;">行1列1</span>', '行1列2', '行1列3'],
-            ['行2列1', '<span style="color:#32c5e9;">行2列2</span>', '行2列3'],
-            ['行3列1', '行3列2', '<span style="color:#67e0e3;">行3列3</span>'],
-            ['行4列1', '<span style="color:#9fe6b8;">行4列2</span>', '行4列3'],
-            ['<span style="color:#ffdb5c;">行5列1</span>', '行5列2', '行5列3'],
-            ['行6列1', '<span style="color:#ff9f7f;">行6列2</span>', '行6列3'],
-            ['行7列1', '行7列2', '<span style="color:#fb7293;">行7列3</span>'],
-            ['行8列1', '<span style="color:#e062ae;">行8列2</span>', '行8列3'],
-            ['<span style="color:#e690d1;">行9列1</span>', '行9列2', '行9列3'],
-            ['行10列1', '<span style="color:#e7bcf3;">行10列2</span>', '行10列3'],
-            ['行10列1', '<span style="color:#e7bcf3;">行10列2</span>', '行10列3']
+            ['<span style="color:#37a2da;">123.4087296</span>', '41.80886078'],
+            ['123.4159698', '<span style="color:#32c5e9;">41.80778122</span>'],
+            ['123.4017715', '41.79084015'],
+            ['123.3570938', '41.83414078'],
+            ['<span style="color:#ffdb5c;">123.4119873</span>', '41.8078804'],
+            ['123.4087067', '<span style="color:#ff9f7f;">41.80638123</span>'],
+            ['123.4119873', '41.8078804'],
+            ['123.4136581', '<span style="color:#e062ae;">41.81689835</span>'],
+            ['<span style="color:#e690d1;">123.3410721</span>', '41.42948151'],
+            ['123.3436737', '<span style="color:#e7bcf3;">41.78839111</span>'],
+            ['123.4128571', '<span style="color:#e7bcf3;">41.80469894</span>'],
+            ['123.4140396', '41.79716873'],
+            ['123.417511', '41.82001114'],
+            ['<span style="color:#ffdb5c;">123.4856567</span>', '41.80027008'],
+            ['123.3980179', '<span style="color:#ff9f7f;">41.80838013</span>'],
           ],
           index: true,
           columnWidth: [50],
           align: ['center'],
           rowNum: 10,
-          headerBGC: '#82BAFF',
+          headerBGC: '##E8FAFE',
           evenRowBGC: 'transparent',
           oddRowBGC:'#E7F9FF',
         },

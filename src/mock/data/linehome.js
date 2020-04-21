@@ -1,7 +1,7 @@
 const option = {
   backgroundColor: "transparent",
   title: {
-      text: "项目工程项目工程期",
+      text: "交通方式数据情况",
       padding: 20,
       textStyle: {
           fontSize: 17,
@@ -14,7 +14,7 @@ const option = {
       }
   },
   legend: {
-      data: ["计划工期", "可行性研究阶段", "初步设计阶段", "施工图设计阶段", "项目实施阶段", "项目验收阶段"],
+      data: ["公交车", "地铁", "步行", "航班", "轮渡", "驾车"],
       align: "right",
       right: 80,
       top: 50
@@ -56,7 +56,7 @@ const option = {
               }
           }
       },
-      data: ["临夏自治州2015年度治理工程项目", "标段一", "标段二"]
+      data: ["高峰均值数据量", "平均数据量", "低谷均值数据量"]
   },
   tooltip: {
       trigger: "axis",
@@ -86,7 +86,7 @@ const option = {
       }
   },
   series: [{
-          name: "计划工期",
+          name: "公交车",
           type: "bar",
           stack: "总量0",
           label: {
@@ -110,7 +110,7 @@ const option = {
           data: [new Date("2018-05-01T00:00:00.000Z"), new Date("2018-03-14T00:00:00.000Z"), new Date("2018-05-01T00:00:00.000Z")]
       },
       {
-          name: "计划工期",
+          name: "公交车",
           type: "bar",
           stack: "总量0",
           itemStyle: {
@@ -123,7 +123,7 @@ const option = {
           data: [new Date("2018-01-01"), new Date("2018-01-01"), new Date("2018-03-15")]
       },
       {
-          name: "可行性研究阶段",
+          name: "地铁",
           type: "bar",
           stack: "总量2",
           label: {
@@ -147,7 +147,7 @@ const option = {
           data: [new Date("2018-01-10T00:00:00.000Z"), new Date("2018-01-10T00:00:00.000Z"), new Date("2018-03-30T00:00:00.000Z")]
       },
       {
-          name: "可行性研究阶段",
+          name: "地铁",
           type: "bar",
           stack: "总量2",
           itemStyle: {
@@ -160,7 +160,7 @@ const option = {
           data: [new Date("2018-01-02"), new Date("2018-01-02"), new Date("2018-03-16")]
       },
       {
-          name: "初步设计阶段",
+          name: "航班",
           type: "bar",
           stack: "总量3",
           label: {
@@ -184,7 +184,7 @@ const option = {
           data: [new Date("2018-02-20T00:00:00.000Z"), new Date("2018-01-20T00:00:00.000Z"), new Date("2018-04-10T00:00:00.000Z")]
       },
       {
-          name: "初步设计阶段",
+          name: "航班",
           type: "bar",
           stack: "总量3",
           itemStyle: {
@@ -197,7 +197,7 @@ const option = {
           data: [new Date("2018-02-01T00:00:00.000Z"), new Date("2018-01-12T00:00:00.000Z"), new Date("2018-04-01T00:00:00.000Z")]
       },
       {
-          name: "施工图设计阶段",
+          name: "步行",
           type: "bar",
           stack: "总量4",
           label: {
@@ -221,7 +221,7 @@ const option = {
           data: [new Date("2018-03-09T00:00:00.000Z"), new Date("2018-01-25T00:00:00.000Z"), new Date("2018-04-20T00:00:00.000Z")]
       },
       {
-          name: "施工图设计阶段",
+          name: "步行",
           type: "bar",
           stack: "总量4",
           itemStyle: {
@@ -234,7 +234,7 @@ const option = {
           data: [new Date("2018-02-25T00:00:00.000Z"), new Date("2018-01-21T00:00:00.000Z"), new Date("2018-04-11T00:00:00.000Z")]
       },
       {
-          name: "项目实施阶段",
+          name: "驾车",
           type: "bar",
           stack: "总量5",
           label: {
@@ -258,7 +258,7 @@ const option = {
           data: [new Date("2018-03-12T00:00:00.000Z"), new Date("2018-02-15T00:00:00.000Z"), new Date("2018-04-30T00:00:00.000Z")]
       },
       {
-          name: "项目实施阶段",
+          name: "驾车",
           type: "bar",
           stack: "总量5",
           itemStyle: {
@@ -269,43 +269,6 @@ const option = {
           zlevel: -1,
           z: 3,
           data: [new Date("2018-03-10T00:00:00.000Z"), new Date("2018-01-26T00:00:00.000Z"), new Date("2018-04-21T00:00:00.000Z")]
-      },
-      {
-          name: "项目验收阶段",
-          type: "bar",
-          stack: "总量6",
-          label: {
-              normal: {
-                  show: true,
-                  color: "#000",
-                  position: "right",
-                  formatter: function(params) {
-                      return params.seriesName
-                  }
-              }
-          },
-          itemStyle: {
-              normal: {
-                  color: 'orange',
-                  borderColor: "#fff",
-                  borderWidth: 2
-              }
-          },
-          zlevel: -1,
-          data: [new Date("2018-03-30T00:00:00.000Z"), new Date("2018-03-13T00:00:00.000Z"), new Date("2018-05-01T00:00:00.000Z")]
-      },
-      {
-          name: "项目验收阶段",
-          type: "bar",
-          stack: "总量6",
-          itemStyle: {
-              normal: {
-                  color: 'white',
-              }
-          },
-          zlevel: -1,
-          z: 3,
-          data: [new Date("2018-03-15T00:00:00.000Z"), new Date("2018-02-16T00:00:00.000Z"), new Date("2018-04-30T00:00:00.000Z")]
       },
   ]
 }

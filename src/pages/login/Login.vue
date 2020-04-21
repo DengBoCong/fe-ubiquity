@@ -26,6 +26,7 @@ export default {
     ]),
     handleSubmit ({ platform, account, password, isStorage }) {
       this.handleLogin({ platform, account, password, isStorage }).then(res => {
+        // this.getUserInfo().then(res)
         // this.getUserInfo().then(res => {
         //   this.$router.push({
         //     name: this.$config.homeName
