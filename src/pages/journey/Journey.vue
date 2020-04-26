@@ -13,36 +13,36 @@
       <ScrollBar>
         <dv-decoration-10 style="width:100%;" />
         <el-container>
-          <Border10 :marginSize="1.5" :widthSize="48" :color="['#7DBDFF', '#41EAD5']">
+          <Border10 :marginSize="1.5" :widthSize="44" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
-              <TopLeftChart></TopLeftChart>
+              <dv-scroll-board :config="configTop1" style="width:90%;height:400px;margin:5%;color:#000000" />
             </template>
           </Border10>
-          <Border10 :marginSize="1.5" :widthSize="48" :color="['#7DBDFF', '#41EAD5']">
+          <Border10 :marginSize="1.5" :widthSize="49" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
-              <TopRightChart></TopRightChart>
+              <dv-flyline-chart-enhanced :config="configTop" style="width:100%;height:100%;" />
             </template>
           </Border10>
         </el-container>
         <el-container>
-          <Border10 :marginSize="1.5" :widthSize="23.75" :color="['#7DBDFF', '#41EAD5']">
+          <!-- <Border10 :marginSize="1.5" :widthSize="23.75" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
               <MiddleLeftChart></MiddleLeftChart>
             </template>
-          </Border10>
-          <Border10 :marginSize="1.5" :widthSize="42.5" :color="['#7DBDFF', '#41EAD5']">
+          </Border10> -->
+          <Border10 :marginSize="1.5" :widthSize="50" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
               <MiddleChart></MiddleChart>
             </template>
           </Border10>
-          <Border10 :marginSize="1.5" :widthSize="23.75" :color="['#7DBDFF', '#41EAD5']">
+          <Border10 :marginSize="1.5" :widthSize="43" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
-              <dv-scroll-board :config="config" style="width:80%;height:350px;margin:10%;color:#000000" />
+              <dv-scroll-board :config="config" style="width:90%;height:350px;margin:5%;color:#000000" />
             </template>
           </Border10>
         </el-container>
         <el-container>
-          <Border10 :marginSize="1.5" :widthSize="97" :color="['#7DBDFF', '#41EAD5']">
+          <Border10 :marginSize="1.5" :widthSize="96" :color="['#7DBDFF', '#41EAD5']">
             <template v-slot:borderContent>
               <BottomChart></BottomChart>
             </template>
@@ -106,25 +106,275 @@
         heightTL: "500px",
         config: {
           data: [
-            ['<span style="color:#37a2da;">行1列1</span>', '行1列2', '行1列3'],
-            ['行2列1', '<span style="color:#32c5e9;">行2列2</span>', '行2列3'],
-            ['行3列1', '行3列2', '<span style="color:#67e0e3;">行3列3</span>'],
-            ['行4列1', '<span style="color:#9fe6b8;">行4列2</span>', '行4列3'],
-            ['<span style="color:#ffdb5c;">行5列1</span>', '行5列2', '行5列3'],
-            ['行6列1', '<span style="color:#ff9f7f;">行6列2</span>', '行6列3'],
-            ['行7列1', '行7列2', '<span style="color:#fb7293;">行7列3</span>'],
-            ['行8列1', '<span style="color:#e062ae;">行8列2</span>', '行8列3'],
-            ['<span style="color:#e690d1;">行9列1</span>', '行9列2', '行9列3'],
-            ['行10列1', '<span style="color:#e7bcf3;">行10列2</span>', '行10列3'],
-            ['行11列1', '<span style="color:#e7bcf3;">行10列2</span>', '行11列3']
+            ['<span style="color:#37a2da;">183666664947</span>', '2018-10-03 12:04:19', '2018-10-03 21:44:25'],
+            ['139666676390', '<span style="color:#32c5e9;">2018-10-03 00:01:09</span>', '2018-10-03 23:52:16'],
+            ['138666603920', '2018-10-03 14:03:06', '<span style="color:#67e0e3;">2018-10-03 20:45:02</span>'],
+            ['135666647178', '<span style="color:#9fe6b8;">2018-10-03 16:42:56</span>', '2018-10-03 17:55:17'],
+            ['<span style="color:#ffdb5c;">139666676390</span>', '2018-10-03 00:02:08', '2018-10-03 13:02:22'],
+            ['136666680267', '<span style="color:#ff9f7f;">2018-10-03 13:25:36</span>', '2018-10-03 17:18:39'],
+            ['158666602965', '2018-10-03 19:38:29', '<span style="color:#fb7293;">2018-10-03 19:52:29</span>'],
+            ['159666609723', '<span style="color:#e062ae;">2018-10-03 13:17:50</span>', '2018-10-03 13:21:50'],
+            ['<span style="color:#e690d1;">135666690982</span>', '2018-10-03 23:01:56', '暂无'],
           ],
-          index: true,
-          columnWidth: [50],
+          // index: true,
+          // columnWidth: [50],
           align: ['center'],
           rowNum: 7,
           evenRowBGC: 'transparent',
           oddRowBGC:'#E7F9FF',
-        }
+        },
+        configTop1: {
+          data: [
+            ['龙之梦旅游度假中心', '工业大学兴顺校区', '207路 首车05:20 末车21:30'],
+            ['家乐福北站店', '玉屏路砂川街', '247路 首车06:00 末车21:00'],
+            ['于洪新城管委会', '马路湾', '257路 首车05:30 末车20:00'],
+            ['西塔', '御龙逸城', '263路 首车05:50 末车20:00'],
+            ['家乐福金牛店', '方家栏', '266东线 首车06:00 末车20:00'],
+            ['滑翔三小区', '龙之梦亚太城', '296路 首车06:00 末车20:00'],
+            ['方家栏', '家乐福金牛店', '沈阳266东线 首车05:40 末车19:30'],
+            ['辽宁反腐倡廉展览馆', '马路湾', '137路 首车05:50 末车19:30'],
+            ['龙之梦亚太城', '长白中路长白二街', '287路 首车06:40 末车19:30'],
+          ],
+          // index: true,
+          // columnWidth: [50],
+          align: ['center'],
+          rowNum: 7,
+          evenRowBGC: 'transparent',
+          oddRowBGC:'transparent',
+        },
+        configTop: {
+          points: [
+            {
+              name: '中山公园东站(公交站)',
+              coordinate: [0.48, 0.35],
+              halo: {
+                show: true,
+              },
+              icon: {
+                src: 'http://datav.jiaminghi.com/img/flylineChart/mapCenterPoint.png',
+                width: 30,
+                height: 30
+              },
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '光荣街十三纬路站(公交站)',
+              coordinate: [0.52, 0.13],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '马路湾北站(公交站)',
+              coordinate: [0.33, 0.19],
+              text: {
+                show: true,
+                color: '#000000',
+              },
+            },
+            {
+              name: '十三纬路三经街站(公交站)',
+              coordinate: [0.79, 0.30],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '许昌',
+              coordinate: [0.53, 0.47],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '平顶山',
+              coordinate: [0.45, 0.54],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '省委(公交站)',
+              coordinate: [0.36, 0.38],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '中华路南京街',
+              coordinate: [0.82, 0.70],
+              halo: {
+                show: true,
+                color: '#8378ea'
+              },
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '二0二医院站(公交站)',
+              coordinate: [0.56, 0.56],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '铁路中学站(公交站)',
+              coordinate: [0.17, 0.76],
+              halo: {
+                show: true,
+                color: '#37a2da'
+              },
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '中华路太原街站(公交站)',
+              coordinate: [0.45, 0.81],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '医大一院站(公交站)',
+              coordinate: [0.55, 0.67],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '市第六医院站(公交站)',
+              coordinate: [0.20, 0.36],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '和平大街南七马路站(公交站)',
+              coordinate: [0.76, 0.41],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            },
+            {
+              name: '十一纬路招商银行站(公交站)',
+              coordinate: [0.68, 0.17],
+              text: {
+                show: true,
+                color: '#000000',
+              }
+            }
+          ],
+          lines: [
+            {
+              source: '光荣街十三纬路站(公交站)',
+              target: '中山公园东站(公交站)',
+              color: '#fb7293',
+              width: 4,
+            },
+            {
+              source: '马路湾北站(公交站)',
+              target: '中山公园东站(公交站)',
+              color: '#fb7293',
+              width: 4,
+            },
+            {
+              source: '十三纬路三经街站(公交站)',
+              target: '中山公园东站(公交站)',
+              color: '#fb7293',
+              width: 4,
+            },
+            {
+              source: '中华路南京街',
+              target: '中山公园东站(公交站)',
+              color: '#fb7293',
+              width: 4
+            },
+            {
+              source: '铁路中学站(公交站)',
+              target: '中山公园东站(公交站)',
+              color: '#fb7293',
+              width: 4
+            },
+            {
+              source: '市第六医院站(公交站)',
+              target: '中山公园东站(公交站)',
+              color: '#fb7293',
+              width: 4,
+            },
+            {
+              source: '和平大街南七马路站(公交站)',
+              target: '中山公园东站(公交站)'
+            },
+            {
+              source: '十一纬路招商银行站(公交站)',
+              target: '中山公园东站(公交站)',
+              color: '#fb7293',
+              width: 4,
+            },
+            {
+              source: '许昌',
+              target: '铁路中学站(公交站)',
+              color: '#37a2da',
+              width: 4,
+            },
+            {
+              source: '平顶山',
+              target: '铁路中学站(公交站)',
+              color: '#37a2da',
+              width: 4,
+            },
+            {
+              source: '省委(公交站)',
+              target: '铁路中学站(公交站)',
+              color: '#37a2da',
+              width: 4,
+            },
+            {
+              source: '医大一院站(公交站)',
+              target: '中华路南京街',
+              color: '#8378ea',
+              width: 4,
+            },
+            {
+              source: '中华路太原街站(公交站)',
+              target: '中华路南京街',
+              color: '#8378ea',
+              width: 4,
+            },
+            {
+              source: '二0二医院站(公交站)',
+              target: '中华路南京街',
+              color: '#8378ea',
+              width: 4,
+            }
+          ],
+          icon: {
+            show: true,
+            src: 'http://datav.jiaminghi.com/img/flylineChart/mapPoint.png'
+          },
+          text: {
+            show: true,
+          },
+          k: 0.5,
+          bgImgSrc: ' '//http://datav.jiaminghi.com/img/flylineChart/map.jpg
+        },
       }
     },
     computed: {

@@ -1,32 +1,32 @@
 const option = {
   title: {
-      text: '多雷达图'
+      text: '数据处理情况'
   },
   tooltip: {
       trigger: 'axis'
   },
   legend: {
       x: 'center',
-      data:['某软件','某主食手机','某水果手机','降水量','蒸发量']
+      data:['数据属性','预测结果','实际结果','数据总量','队列数据量']
   },
   radar: [
       {
           indicator: [
-              {text: '品牌', max: 100},
-              {text: '内容', max: 100},
-              {text: '可用性', max: 100},
-              {text: '功能', max: 100}
+              {text: '时间次数', max: 100},
+              {text: '重复次数', max: 100},
+              {text: '地点次数', max: 100},
+              {text: '基站次数', max: 100}
           ],
           center: ['25%','40%'],
           radius: 80
       },
       {
           indicator: [
-              {text: '外观', max: 100},
-              {text: '拍照', max: 100},
-              {text: '系统', max: 100},
-              {text: '性能', max: 100},
-              {text: '屏幕', max: 100}
+              {text: '准确率', max: 100},
+              {text: '峰值估计', max: 100},
+              {text: '均值估计', max: 100},
+              {text: '缺失率', max: 100},
+              {text: '谷底估计', max: 100}
           ],
           radius: 80,
           center: ['50%','60%'],
@@ -53,7 +53,7 @@ const option = {
           data: [
               {
                   value: [60,73,85,40],
-                  name: '某软件'
+                  name: '数据属性'
               }
           ]
       },
@@ -63,11 +63,11 @@ const option = {
           data: [
               {
                   value: [85, 90, 90, 95, 95],
-                  name: '某主食手机'
+                  name: '预测结果'
               },
               {
                   value: [95, 80, 95, 90, 93],
-                  name: '某水果手机'
+                  name: '实际结果'
               }
           ]
       },
@@ -77,11 +77,11 @@ const option = {
           itemStyle: {normal: {areaStyle: {type: 'default'}}},
           data: [
               {
-                  name: '降水量',
+                  name: '数据总量',
                   value: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 75.6, 82.2, 48.7, 18.8, 6.0, 2.3],
               },
               {
-                  name:'蒸发量',
+                  name:'队列数据量',
                   value:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 35.6, 62.2, 32.6, 20.0, 6.4, 3.3]
               }
           ]

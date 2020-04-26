@@ -4,7 +4,7 @@
       <Drawer :drawer="drawer"></Drawer>
     </template>
     <template v-slot:sidebar>
-      <HomeSideBar></HomeSideBar>
+      <CrowdSideBar></CrowdSideBar>
     </template>
     <template v-slot:topbar>
       <TopBar></TopBar>
@@ -60,7 +60,7 @@
   // import {getHomeMultidata} from "network/home"
   import MainFrame from 'components/context/main-frame/MainFrame'
   import Drawer from 'components/common/drawer/Drawer'
-  import HomeSideBar from 'components/context/sidebar/SideBar'
+  import CrowdSideBar from './CrowdSideBar'
   import TopBar from 'components/context/topbar/TopBar'
   import ScrollBar from 'components/context/scrollbar/ScrollBar'
   import Card from 'components/context/card/Card'
@@ -81,7 +81,7 @@
     components: {
       MainFrame,
       Drawer,
-      HomeSideBar,
+      CrowdSideBar,
       TopBar,
       ScrollBar,
       Card,

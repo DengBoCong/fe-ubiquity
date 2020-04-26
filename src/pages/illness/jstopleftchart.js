@@ -8,7 +8,7 @@ const option = {
         color: 'transparent'
     }]),
     title: {
-        text: "三国演义中人名出现次数排名",
+        text: "全球范围内各大洲疫情统计",
         subtext: "ZBH",
         top: "top",
         left: "center"
@@ -23,7 +23,7 @@ const option = {
         },
         selectedMode: 'false',
         bottom: 20,
-        data: ['刘备2239', '诸葛亮1892', '曹操979', '关羽948', '张飞408', '赵云393', '孙权390', '吕布384', '周瑜328', '魏延327']
+        data: ['亚洲', '北美洲', '欧洲', '南美洲', '非洲', '大洋洲', '其他']
     }],
     toolbox: {
         show: true,
@@ -50,7 +50,7 @@ const option = {
     animationDuration: 3000,
     animationEasingUpdate: 'quinticInOut',
     series: [{
-        name: '三国演义',
+        name: '全球疫情',
         type: 'graph',
         layout: 'force',
 
@@ -58,292 +58,213 @@ const option = {
             repulsion: 300
         },
         data: [{
-            "name": "三国演义",
+            "name": "全球疫情",
             // "x": 0,
             // y: 0,
             "symbolSize": 150,
             "draggable": "true",
-            "value": 27
+            "value": 2646958
 
         }, {
-            "name": "刘备2239",
-            "value": 15,
+            "name": "亚洲",
+            "value": 422728,
             "symbolSize": 80,
-            "category": "刘备2239",
+            "category": "亚洲",
             "draggable": "true"
         }, {
-            "name": "使君70",
+            "name": "现有确诊",
             "symbolSize": 3,
-            "category": "刘备2239",
+            "category": "亚洲",
             "draggable": "true",
-            "value": 1
+            "value": 207003
         }, {
-            "name": "玄德1770",
+            "name": "死亡",
             "symbolSize": 60,
-            "category": "刘备2239",
+            "category": "亚洲",
             "draggable": "true",
-            "value": 1
+            "value": 15858
         }, {
-            "name": "皇叔112",
+            "name": "治愈",
             "symbolSize": 15,
-            "category": "刘备2239",
+            "category": "亚洲",
             "draggable": "true",
-            "value": 1
+            "value": 199867
         }, {
-            "name": "诸葛亮1892",
-            "value": 60,
+            "name": "北美洲",
+            "value": 915775,
             "symbolSize": 60,
-            "category": "诸葛亮1892",
+            "category": "北美洲",
             "draggable": "true"
         }, {
-            "name": "孔明1643",
+            "name": "现有确诊1643",
             "symbolSize": 50,
-            "category": "诸葛亮1892",
+            "category": "北美洲",
             "draggable": "true",
-            "value": 1
+            "value": 761900
         }, {
-            "name": "卧龙40",
+            "name": "死亡40",
             "symbolSize": 3,
-            "category": "诸葛亮1892",
+            "category": "北美洲",
             "draggable": "true",
-            "value": 1
+            "value": 51289
         }, {
-            "name": "曹操979",
+            "name": "欧洲",
             "value": 5,
             "symbolSize": 40,
-            "category": "曹操979",
+            "category": "欧洲",
             "draggable": "true"
         }, {
-            "name": "孟德29",
+            "name": "现有确诊29",
             "symbolSize": 3,
-            "category": "曹操979",
+            "category": "欧洲",
             "draggable": "true",
-            "value": 1
+            "value": 689366
         }, {
-            "name": "曹公44",
+            "name": "死亡44",
             "symbolSize": 7,
-            "category": "曹操979",
+            "category": "欧洲",
             "draggable": "true",
-            "value": 1
+            "value": 111348
         }, {
-            "name": "关羽948",
-            "value": 40,
+            "name": "南美洲",
+            "value": 97327,
             "symbolSize": 18,
-            "category": "关羽948",
+            "category": "南美洲",
             "draggable": "true"
         }, {
-            "name": "云长431",
+            "name": "现有确诊431",
             "symbolSize": 20,
-            "category": "关羽948",
+            "category": "南美洲",
             "draggable": "true",
-            "value": 1
+            "value": 51220
         }, {
-            "name": "关公508",
+            "name": "死亡508",
             "symbolSize": 25,
-            "category": "关羽948",
+            "category": "南美洲",
             "draggable": "true",
-            "value": 1
+            "value": 4609
         }, {
-            "name": "张飞408",
-            "value": 8,
+            "name": "非洲",
+            "value": 26345,
             "symbolSize": 25,
-            "category": "张飞408",
+            "category": "非洲",
             "draggable": "true"
         }, {
-            "name": "翼德55",
+            "name": "现有确诊55",
             "symbolSize": 5,
-            "category": "张飞408",
+            "category": "非洲",
             "draggable": "true",
-            "value": 1
+            "value": 17913
         }, {
-            "name": "赵云393",
-            "value": 5,
+            "name": "大洋洲",
+            "value": 8674,
             "symbolSize": 30,
-            "category": "赵云393",
+            "category": "大洋洲",
             "draggable": "true"
         }, {
-            "name": "子龙95",
+            "name": "现有确诊95",
             "symbolSize": 7,
-            "category": "赵云393",
+            "category": "大洋洲",
             "draggable": "true",
-            "value": 1
+            "value": 2185
         }, {
-            "name": "孙权390",
+            "name": "其他",
             "value": 30,
             "symbolSize": 30,
-            "category": "孙权390",
+            "category": "其他",
             "draggable": "true"
         }, {
-            "name": "仲谋10",
+            "name": "现有确诊10",
             "symbolSize": 3,
-            "category": "孙权390",
+            "category": "其他",
             "draggable": "true",
-            "value": 1
+            "value": 54
         }, {
-            "name": "吴侯72",
+            "name": "死亡72",
             "symbolSize": 10,
-            "category": "孙权390",
+            "category": "其他",
             "draggable": "true",
-            "value": 1
-        }, {
-            "name": "吕布384",
-            "value": 20,
-            "symbolSize": 30,
-            "category": "吕布384",
-            "draggable": "true"
-        }, {
-            "name": "奉先15",
-            "symbolSize": 3,
-            "category": "吕布384",
-            "draggable": "true",
-            "value": 1
-        }, {
-            "name": "温侯12",
-            "symbolSize": 3,
-            "category": "吕布384",
-            "draggable": "true",
-            "value": 1
-        }, {
-            "name": "周瑜328",
-            "value": 6,
-            "symbolSize": 18,
-            "category": "周瑜328",
-            "draggable": "true"
-        }, {
-            "name": "公瑾60",
-            "symbolSize": 5,
-            "category": "周瑜328",
-            "draggable": "true",
-            "value": 1
-        }, {
-            "name": "周郎35",
-            "symbolSize": 3,
-            "category": "周瑜328",
-            "draggable": "true",
-            "value": 1
-        }, {
-            "name": "魏延327",
-            "value": 6,
-            "symbolSize": 18,
-            "category": "魏延327",
-            "draggable": "true"
-        }, {
-            "name": "文长12",
-            "symbolSize": 3,
-            "category": "魏延327",
-            "draggable": "true",
-            "value": 1
-
+            "value": 13
         }],
         links: [{
-            "source": "三国演义",
-            "target": "刘备2239"
+            "source": "全球疫情",
+            "target": "亚洲"
         }, {
-            "source": "刘备2239",
-            "target": "使君70"
+            "source": "亚洲",
+            "target": "现有确诊"
         }, {
-            "source": "刘备2239",
-            "target": "玄德1770"
+            "source": "亚洲",
+            "target": "死亡"
         }, {
-            "source": "刘备2239",
-            "target": "皇叔112"
+            "source": "亚洲",
+            "target": "治愈"
         }, {
-            "source": "三国演义",
-            "target": "诸葛亮1892"
+            "source": "全球疫情",
+            "target": "北美洲"
         }, {
-            "source": "诸葛亮1892",
-            "target": "孔明1643"
+            "source": "北美洲",
+            "target": "现有确诊1643"
         }, {
-            "source": "诸葛亮1892",
-            "target": "卧龙40"
+            "source": "北美洲",
+            "target": "死亡40"
         }, {
-            "source": "三国演义",
-            "target": "曹操979"
+            "source": "全球疫情",
+            "target": "欧洲"
         }, {
-            "source": "曹操979",
-            "target": "孟德29"
+            "source": "欧洲",
+            "target": "现有确诊29"
         }, {
-            "source": "曹操979",
-            "target": "曹公44"
+            "source": "欧洲",
+            "target": "死亡44"
         }, {
-            "source": "三国演义",
-            "target": "关羽948"
+            "source": "全球疫情",
+            "target": "南美洲"
         }, {
-            "source": "关羽948",
-            "target": "云长431"
+            "source": "南美洲",
+            "target": "现有确诊431"
         }, {
-            "source": "关羽948",
-            "target": "关公508"
+            "source": "南美洲",
+            "target": "死亡508"
         }, {
-            "source": "三国演义",
-            "target": "张飞408"
+            "source": "全球疫情",
+            "target": "非洲"
         }, {
-            "source": "张飞408",
-            "target": "翼德55"
+            "source": "非洲",
+            "target": "现有确诊55"
         }, {
-            "source": "三国演义",
-            "target": "赵云393"
+            "source": "全球疫情",
+            "target": "大洋洲"
         }, {
-            "source": "赵云393",
-            "target": "子龙95"
+            "source": "大洋洲",
+            "target": "现有确诊95"
         }, {
-            "source": "三国演义",
-            "target": "孙权390"
+            "source": "全球疫情",
+            "target": "其他"
         }, {
-            "source": "孙权390",
-            "target": "仲谋10"
+            "source": "其他",
+            "target": "现有确诊10"
         }, {
-            "source": "孙权390",
-            "target": "吴侯72"
+            "source": "其他",
+            "target": "死亡72"
         }, {
-            "source": "三国演义",
-            "target": "吕布384"
-        }, {
-            "source": "吕布384",
-            "target": "奉先15"
-        }, {
-            "source": "吕布384",
-            "target": "温侯12"
-        }, {
-            "source": "三国演义",
-            "target": "周瑜328"
-        }, {
-            "source": "周瑜328",
-            "target": "公瑾60"
-        }, {
-            "source": "周瑜328",
-            "target": "周郎35"
-        }, {
-            "source": "三国演义",
-            "target": "魏延327"
-        }, {
-            "source": "魏延327",
-            "target": "文长12"
-        }, {
-            "source": "三国演义",
+            "source": "全球疫情",
             "target": "法学院"
 
         }],
         categories: [{
-            'name': '刘备2239'
+            'name': '亚洲'
         }, {
-            'name': '诸葛亮1892'
+            'name': '北美洲'
         }, {
-            'name': '曹操979'
+            'name': '欧洲'
         }, {
-            'name': '关羽948'
+            'name': '南美洲'
         }, {
-            'name': '张飞408'
+            'name': '非洲'
         }, {
-            'name': '赵云393'
+            'name': '大洋洲'
         }, {
-            'name': '孙权390'
-        }, {
-            'name': '吕布384'
-        }, {
-            'name': '周瑜328'
-        }, {
-            'name': '魏延327'
+            'name': '其他'
         }, {
 
         }],

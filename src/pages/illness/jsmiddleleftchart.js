@@ -1,7 +1,7 @@
 import echarts from 'echarts'
 const option = {
   series: [{
-          name: '漏斗图',
+          name: '全球疫情占比图',
           color: ['#e9f6f1', '#dceffc', '#def2f4', '#fff6e7'],
           type: 'funnel',
           left: '5%',
@@ -333,28 +333,28 @@ const option = {
           },
           data: [{
                   "value": 80,
-                  "data": 411833,
-                  "name": "满足策略策略数"
+                  "data": 2646958,
+                  "name": "累积确诊"
               },
               {
                   "value": 60,
-                  "data": 196625,
-                  "name": "检查升级数"
+                  "data": 1729641,
+                  "name": "现有确诊"
               },
               {
                   "value": 40,
-                  "data": 191061,
-                  "name": "下载成功数"
+                  "data": 184457,
+                  "name": "死亡"
               },
               {
                   "value": 20,
-                  "data": 106227,
-                  "name": "升级成功车辆数"
+                  "data": 732860,
+                  "name": "治愈"
               }
           ]
       },
       {
-          name: '漏斗图',
+          name: '占比图',
           type: 'funnel',
           left: '5%',
           top: 0,
@@ -384,26 +384,26 @@ const option = {
           data: [{
                   "value": 80,
                   "rote": 0,
-                  "name": "满足策略策略数",
-                  "rate": "满足策略率"
+                  "name": "满足累积确诊数",
+                  "rate": "满足确诊率"
               },
               {
                   "value": 60,
                   "rote": 47.7,
-                  "name": "检查升级数",
-                  "rate": "检测更新率"
+                  "name": "检查现有确诊数",
+                  "rate": "检测确诊率"
               },
               {
                   "value": 40,
                   "rote": 97.2,
-                  "name": "下载成功数",
-                  "rate": "下载成功率"
+                  "name": "死亡数",
+                  "rate": "死亡率"
               },
               {
                   "value": 20,
                   "rote": 54.0,
-                  "name": "升级成功车辆数",
-                  "rate": "升级成功率"
+                  "name": "治愈数",
+                  "rate": "治愈率"
               }
           ]
       }

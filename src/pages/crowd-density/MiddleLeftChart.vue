@@ -3,7 +3,7 @@
   :options="crowddensity" 
   :init-options="initOptions" 
   ref="crowddensity" 
-  autoresize style="width:100%;margin:0px"/>
+  autoresize style="width:100%;margin-top:30px"/>
 </template>
 
 <script>

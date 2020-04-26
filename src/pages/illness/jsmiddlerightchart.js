@@ -118,7 +118,7 @@ const option = {
             // controlStyle: {
             //     position: 'left'
             // },
-            data: ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014'],
+            data: ['前九周', '前八周', '前七周', '前六周', '前五周', '前四周', '前三周', '前二周', '前一周'],
             label: {
                 formatter: function(s) {
                     return (new Date(s)).getFullYear();
@@ -126,7 +126,7 @@ const option = {
             }
         },
         title: {
-            subtext: '数据来自那美克星环保局'
+            subtext: '数据来自 网络数据'
         },
         tooltip: {},
         legend: {
@@ -151,7 +151,7 @@ const option = {
                 'interval': 0
             },
             'data': [
-                '铜', '锌', '氟化物', '硒', '砷', '铬'
+                '第一', '第二', '第三', '第四', '第五', '第六'
             ],
             splitLine: {
                 show: true
@@ -159,31 +159,31 @@ const option = {
         }],
         yAxis: [{
             type: 'value',
-            name: '监测结果(mg/L)',
+            name: '监测结果(%)',
         }],
         polar: [{
             indicator: [{
-                name: '铜',
+                name: '第一',
                 max: 0.05
 
             }, {
-                name: '锌',
+                name: '第二',
                 max: 0.47
 
             }, {
-                name: '氟化物',
+                name: '第三',
                 max: 2.57
 
             }, {
-                name: '硒',
+                name: '第四',
                 max: 0.001
 
             }, {
-                name: '砷',
+                name: '第五',
                 max: 0.014
 
             }, {
-                name: '铬',
+                name: '第六',
                 max: 0.001
 
             }],
@@ -225,7 +225,7 @@ const option = {
 
         {
             title: {
-                text: '2006年地表水监测指标监测值'
+                text: '前九周疫情情况'
             },
             series: [{
                 data: dataMap.datapoint1['2006']
@@ -272,7 +272,7 @@ const option = {
             }]
         }, {
             title: {
-                text: '2007年地表水监测指标监测值'
+                text: '前八周疫情情况'
             },
             series: [{
                 data: dataMap.datapoint1['2007']
@@ -322,7 +322,7 @@ const option = {
 
         {
             title: {
-                text: '2008年地表水监测指标监测值'
+                text: '前七周疫情情况'
             },
             series: [{
                 data: dataMap.datapoint1['2008']
@@ -369,7 +369,7 @@ const option = {
             }]
         }, {
             title: {
-                text: '2009年地表水监测指标监测值'
+                text: '前六周疫情情况'
             },
             series: [{
                 data: dataMap.datapoint1['2009']
@@ -416,7 +416,7 @@ const option = {
             }]
         }, {
             title: {
-                text: '2010年地表水监测指标监测值'
+                text: '前五周疫情情况'
             },
             series: [{
                 data: dataMap.datapoint1['2010']
@@ -463,7 +463,7 @@ const option = {
             }]
         }, {
             title: {
-                text: '2011年地表水监测指标监测值'
+                text: '前四周疫情情况'
             },
             series: [{
                 data: dataMap.datapoint1['2011']
@@ -510,7 +510,7 @@ const option = {
             }]
         }, {
             title: {
-                text: '2012年地表水监测指标监测值'
+                text: '前三周疫情情况'
             },
             series: [{
                 data: dataMap.datapoint1['2012']
@@ -557,7 +557,7 @@ const option = {
             }]
         }, {
             title: {
-                text: '2013年地表水监测指标监测值'
+                text: '前二周疫情情况'
             },
             series: [{
                 data: dataMap.datapoint1['2013']
@@ -604,7 +604,7 @@ const option = {
             }]
         }, {
             title: {
-                text: '2014年地表水监测指标监测值'
+                text: '前一周疫情情况'
             },
             series: [{
                 data: dataMap.datapoint1['2014']
