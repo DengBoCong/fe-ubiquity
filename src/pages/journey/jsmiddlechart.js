@@ -123,7 +123,7 @@ for (var n = 0; n < data.timeline.length; n++) {
   option.options.push({
       title: {
           show: true,
-          text: '11-01至'+data.timeline[n] + '日负面舆情统计'
+          text: data.timeline[n] + ' 时段内，该站驻留情况'
       },
       series: {
           name: data.timeline[n],

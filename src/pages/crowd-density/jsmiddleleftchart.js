@@ -71,7 +71,7 @@ const option = {
             }
     },
     series: [{
-        name: 'Punch Card',
+        name: '中山公园东站(公交站)',
         type: 'heatmap',
         data: data,
         label: {

@@ -44,31 +44,31 @@ export default {
         //   name: "dataReport",
         //   value: "https://img-blog.csdnimg.cn/20200323171425633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
         // },
+        // {
+        //   id: 2,
+        //   name: "dataTrend",
+        //   value: "https://img-blog.csdnimg.cn/20200323171448389.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
+        // },
         {
           id: 2,
-          name: "dataTrend",
-          value: "https://img-blog.csdnimg.cn/20200323171448389.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
-        },
-        {
-          id: 3,
           name: "illness",
           value: "https://img-blog.csdnimg.cn/20200323171515251.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
         },
         {
-          id: 4,
+          id: 3,
           name: "journey",
-          value: "https://img-blog.csdnimg.cn/20200323171535391.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
+          value: "https://img-blog.csdnimg.cn/20200426172433482.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
         },
         {
-          id: 5,
+          id: 4,
           name: "personalAnalysis",
           value: "https://img-blog.csdnimg.cn/20200223222435463.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
         },
-        {
-          id: 6,
-          name: "tripMode",
-          value: "https://img-blog.csdnimg.cn/20200323171556859.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
-        }
+        // {
+        //   id: 6,
+        //   name: "tripMode",
+        //   value: "https://img-blog.csdnimg.cn/20200426172329594.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RCQ18xMjE=,size_16,color_FFFFFF,t_70"
+        // }
       ]
     };
   },

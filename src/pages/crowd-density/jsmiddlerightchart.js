@@ -37,7 +37,7 @@ const option = {
         bottom: '15%'
     },
     series: [{
-        name: 'Punch Card',
+        name: '和平大街八纬路站(公交站)',
         type: 'heatmap',
         data: data,
         label: {
